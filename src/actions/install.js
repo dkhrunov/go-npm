@@ -32,7 +32,13 @@ function install(callback) {
 
   console.log('Downloading from URL: ' + opts.url);
 
-  const req = request({ uri: opts.url });
+  const headers = {};
+
+  if (opts.token) {
+    headers['Authorization'] = `Bearer ${opts.token}`;
+  }
+
+  const req = request({ uri: opts.url, headers });
 
   req.on('error', () => callback('Error downloading from URL: ' + opts.url));
   req.on('response', (res) => {

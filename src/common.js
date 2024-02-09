@@ -154,7 +154,7 @@ function parsePackageJson() {
   if (!existsSync(packageJsonPath)) {
     console.error(
       'Unable to find package.json. ' +
-        'Please run this script at root of the package you want to be installed'
+      'Please run this script at root of the package you want to be installed'
     );
     return;
   }
@@ -172,6 +172,7 @@ function parsePackageJson() {
   let binName = packageJson.goBinary.name;
   let url = getUrl(packageJson.goBinary.url, process);
   let version = packageJson.version;
+  let token = packageJson.goBinary.token ? process.env[packageJson.goBinary.token] : null;
 
   if (!url) {
     console.error('Could not find url matching platform and architecture');
@@ -201,7 +202,8 @@ function parsePackageJson() {
     binName,
     binPath,
     url,
-    version
+    version,
+    token
   };
 }
 

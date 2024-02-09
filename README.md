@@ -1,5 +1,10 @@
 ## Go NPM
 
+### (@dkhrunov): MODIFICATIONS FROM @go-task/go-npm FORK
+
+* Added `"token"` field to `"goBinary"` in package.json for private git repos. 
+__In this field you indicate not the token itself, but an env variable that stores the value of the token.__
+
 ### (@go-task): MODIFICATIONS FROM gzuidhof/go-npm FORK
 
 * Added `{{archive_ext}}` to recognize `.zip` packages on Windows and `.tar.gz` on macOS and Linux.
@@ -63,7 +68,7 @@ Answer the questions to create an initial package.json file
 
 From the directory containing package.json file, do
 
-`$ npm install @go-task/go-npm --save`
+`$ npm install @dkhrunov/go-npm --save`
 
 This will install go-npm under to your package.json file. It will also create a `node_modules` directory where the `go-npm` package is downloaded. You don't need this directory since you are only going to publish the module and not consume it yourself. Let's go ahead and delete it.
 

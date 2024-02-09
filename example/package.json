@@ -10,6 +10,7 @@
   "goBinary": {
     "name": "myBinaryName",
     "path": "./bin",
-    "url": "https://github.com/user/myrepo/releases/download/v{{version}}/myBinaryName{{platform}}_{{arch}}.tar.gz"
+    "url": "https://github.com/user/myrepo/releases/download/v{{version}}/myBinaryName{{platform}}_{{arch}}.tar.gz",
+    "token": "GIT_HUB_TOKEN"
   }
 }

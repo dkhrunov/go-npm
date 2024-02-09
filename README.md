@@ -96,6 +96,7 @@ You need to tell `go-npm` where to download the binaries from, and where to inst
       "name": "command-name",
       "path": "./bin",
       "url": "https://github.com/user/my-go-package/releases/download/v{{version}}/myGoPackage_{{version}}_{{platform}}_{{arch}}.tar.gz"
+      "token": "GIT_HUB_TOKEN"
 ```
 
 * *name*: Name of the command users will use to run your binary.

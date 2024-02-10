@@ -122,7 +122,7 @@ All that's left now is publish to NPM. As I promised before, just one command
 
 To install:
 
-`npm install -g your-app-name`
+`GIT_HUB_TOKEN=asdfAS6Db243as1 npm install -g your-app-name`
 
 To Update:
 
